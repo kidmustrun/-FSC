@@ -217,8 +217,8 @@ div.conv-form-wrapper div.options {
     word-wrap: normal;
     white-space: nowrap;
     position: absolute;
-    bottom: 100%;
-    right: 5%;
+    bottom: 0;
+    right: 1vw;
     width: 100%;
 }
 
@@ -407,6 +407,44 @@ span.clear {
 
 .spinLoader:after {
     left: 1.5em;
+}
+
+.contacts-wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+
+a.contacts {
+    display: flex;
+    padding: 3px;
+    border-radius: 20px;
+    border: 3px solid #75C045;
+    color: #75C045;
+    font-size: 18px;
+    line-height: 19px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.col-sm-4 {
+    padding: 5px !important;
+    justify-content: center;
+}
+
+.col-sm-8 {
+    padding: 5px !important;
+    justify-content: center;
+}
+
+a.contacts .row {
+    padding: 3%;
+    text-align: center;
+}
+
+a.contacts:hover {
+    color: rgb(84, 153, 42);
 }
 
 @-webkit-keyframes spinLoaderChat {
