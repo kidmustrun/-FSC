@@ -1,4 +1,4 @@
-.typing_loader{
+.typing_loader {
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -10,73 +10,68 @@
     left: -12px;
     margin: 7px 15px 6px;
 }
+
 .to .typing_loader {
     animation: typing-black 1s linear infinite alternate;
 }
-@-webkit-keyframes typing{
-    0%{
-        background-color: rgba(255,255,255, 1);
-        box-shadow: 12px 0px 0px 0px rgba(255,255,255,0.4),
-        24px 0px 0px 0px rgba(255,255,255,0.2);
+
+@-webkit-keyframes typing {
+    0% {
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 12px 0px 0px 0px rgba(255, 255, 255, 0.4), 24px 0px 0px 0px rgba(255, 255, 255, 0.2);
     }
     50% {
-        background-color: rgba(255,255,255, 0.4);
-        box-shadow: 12px 0px 0px 0px rgba(255,255,255,1),
-        24px 0px 0px 0px rgba(255,255,255,0.4);
+        background-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(255, 255, 255, 1), 24px 0px 0px 0px rgba(255, 255, 255, 0.4);
     }
-    100%{ background-color: rgba(255,255,255, 0.2);
-        box-shadow: 12px 0px 0px 0px rgba(255,255,255,0.4),
-        24px 0px 0px 0px rgba(255,255,255,1);
+    100% {
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 12px 0px 0px 0px rgba(255, 255, 255, 0.4), 24px 0px 0px 0px rgba(255, 255, 255, 1);
     }
 }
 
-@-moz-keyframes typing{
-    0%{
-        background-color: rgba(255,255,255, 1);
-        box-shadow: 12px 0px 0px 0px rgba(255,255,255,0.4),
-        24px 0px 0px 0px rgba(255,255,255,0.2);
+@-moz-keyframes typing {
+    0% {
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 12px 0px 0px 0px rgba(255, 255, 255, 0.4), 24px 0px 0px 0px rgba(255, 255, 255, 0.2);
     }
     50% {
-        background-color: rgba(255,255,255, 0.4);
-        box-shadow: 12px 0px 0px 0px rgba(255,255,255,1),
-        24px 0px 0px 0px rgba(255,255,255,0.4);
+        background-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(255, 255, 255, 1), 24px 0px 0px 0px rgba(255, 255, 255, 0.4);
     }
-    100%{ background-color: rgba(255,255,255, 0.2);
-        box-shadow: 12px 0px 0px 0px rgba(255,255,255,0.4),
-        24px 0px 0px 0px rgba(255,255,255,1);
+    100% {
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 12px 0px 0px 0px rgba(255, 255, 255, 0.4), 24px 0px 0px 0px rgba(255, 255, 255, 1);
     }
 }
 
-@keyframes typing-black{
-    0%{
+@keyframes typing-black {
+    0% {
         background-color: rgba(74, 74, 74, 1);
-        box-shadow: 12px 0px 0px 0px rgba(74, 74, 74, 0.4),
-        24px 0px 0px 0px rgba(74, 74, 74, 0.2);
+        box-shadow: 12px 0px 0px 0px rgba(74, 74, 74, 0.4), 24px 0px 0px 0px rgba(74, 74, 74, 0.2);
     }
     50% {
         background-color: rgba(74, 74, 74, 0.4);
-        box-shadow: 12px 0px 0px 0px rgba(74, 74, 74, 1),
-        24px 0px 0px 0px rgba(74, 74, 74,0.4);
+        box-shadow: 12px 0px 0px 0px rgba(74, 74, 74, 1), 24px 0px 0px 0px rgba(74, 74, 74, 0.4);
     }
-    100%{ background-color: rgba(74, 74, 74, 0.2);
-        box-shadow: 12px 0px 0px 0px rgba(74, 74, 74,0.4),
-        24px 0px 0px 0px rgba(74, 74, 74,1);
+    100% {
+        background-color: rgba(74, 74, 74, 0.2);
+        box-shadow: 12px 0px 0px 0px rgba(74, 74, 74, 0.4), 24px 0px 0px 0px rgba(74, 74, 74, 1);
     }
 }
-@keyframes typing{
-    0%{
-        background-color: rgba(255,255,255, 1);
-        box-shadow: 12px 0px 0px 0px rgba(255,255,255,0.4),
-        24px 0px 0px 0px rgba(255,255,255,0.2);
+
+@keyframes typing {
+    0% {
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 12px 0px 0px 0px rgba(255, 255, 255, 0.4), 24px 0px 0px 0px rgba(255, 255, 255, 0.2);
     }
     50% {
-        background-color: rgba(255,255,255, 0.4);
-        box-shadow: 12px 0px 0px 0px rgba(255,255,255,1),
-        24px 0px 0px 0px rgba(255,255,255,0.4);
+        background-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(255, 255, 255, 1), 24px 0px 0px 0px rgba(255, 255, 255, 0.4);
     }
-    100%{ background-color: rgba(255,255,255, 0.2);
-        box-shadow: 12px 0px 0px 0px rgba(255,255,255,0.4),
-        24px 0px 0px 0px rgba(255,255,255,1);
+    100% {
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 12px 0px 0px 0px rgba(255, 255, 255, 0.4), 24px 0px 0px 0px rgba(255, 255, 255, 1);
     }
 }
 
@@ -103,7 +98,6 @@ form.convFormDynamic textarea.userInputDynamic {
     margin-right: 2.5%;
 }
 
-
 form.convFormDynamic input.userInputDynamic {
     border: none;
     padding: 7px 10px;
@@ -118,6 +112,7 @@ form.convFormDynamic input.userInputDynamic {
     max-width: 88%;
     margin-right: 2.5%;
 }
+
 div.conv-form-wrapper:after {
     content: '';
     display: block;
@@ -125,25 +120,31 @@ div.conv-form-wrapper:after {
     width: 100%;
     height: 1px;
 }
+
 div.conv-form-wrapper div#messages {
     max-height: 71vh;
     height: auto !important;
     overflow-y: scroll;
     scrollbar-width: none;
-    -ms-overflow-style: none; /* IE 11 */
+    -ms-overflow-style: none;
+    /* IE 11 */
 }
+
 div.conv-form-wrapper * {
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
+
 div.conv-form-wrapper div#messages:after {
     content: '';
     display: table;
     clear: both;
 }
+
 div.conv-form-wrapper {
     position: relative;
 }
+
 div.conv-form-wrapper div.wrapper-messages {
     position: relative;
     height: 577px;
@@ -151,6 +152,7 @@ div.conv-form-wrapper div.wrapper-messages {
     overflow-y: scroll;
     transition: margin 0.1s;
 }
+
 div.conv-form-wrapper:before {
     content: '';
     position: absolute;
@@ -162,22 +164,28 @@ div.conv-form-wrapper:before {
     z-index: 2;
     background: linear-gradient(#fff, transparent);
 }
+
 @media (max-width: 767px) {
-    div.conv-form-wrapper div.wrapper-messages, div.conv-form-wrapper div#messages {
+    div.conv-form-wrapper div.wrapper-messages,
+    div.conv-form-wrapper div#messages {
         max-height: 71vh;
     }
 }
 
-div.conv-form-wrapper div.wrapper-messages::-webkit-scrollbar, div#feed ul::-webkit-scrollbar, div.conv-form-wrapper div.options::-webkit-scrollbar {
+div.conv-form-wrapper div.wrapper-messages::-webkit-scrollbar,
+div#feed ul::-webkit-scrollbar,
+div.conv-form-wrapper div.options::-webkit-scrollbar {
     width: 0px;
     height: 0px;
     /* remove scrollbar space */
     background: transparent;
     /* optional: just make scrollbar invisible */
 }
+
 input[type="text"].userInputDynamic.error {
     color: #ac0000 !important;
 }
+
 input[type="text"].userInputDynamic {
     border-radius: 3px;
     margin: 7px 10px;
@@ -201,6 +209,7 @@ div.conv-form-wrapper div#messages {
     padding-bottom: 20px;
     /*max-height: 71vh;*/
 }
+
 div.conv-form-wrapper div.options {
     word-wrap: normal;
     white-space: nowrap;
@@ -210,35 +219,44 @@ div.conv-form-wrapper div.options {
     width: 100%;
     transform: translateY(-5px);
 }
+
 div.conv-form-wrapper div.options:after {
     content: '';
     display: table;
     clear: both;
 }
+
 div.conv-form-wrapper div.options div.option {
     padding: 7px 12px;
-    border: 1px solid rgba(6,153,184,0.3);
-    display: inline-block;
-    margin: 5px;
+    border: 1px solid #75C045;
+    display: block;
+    margin-right: 5px;
     background: #fff;
-    color: #06c5a6;
+    color: #75C045;
     cursor: pointer;
     border-radius: 20px;
     font-size: 0.9rem;
+    max-width: 50%;
+    float: right;
+    clear: both;
 }
+
 div.conv-form-wrapper div.message {
     animation: slideTop 0.15s ease;
 }
+
 div.conv-form-wrapper div.message:after {
     content: '';
     display: table;
     clear: both;
 }
-div.conv-form-wrapper  div.message.ready {
+
+div.conv-form-wrapper div.message.ready {
     animation: bounceIn 0.2s ease;
     transform-origin: 0 0 0;
 }
-div.conv-form-wrapper  div#messages div.message {
+
+div.conv-form-wrapper div#messages div.message {
     border-radius: 20px;
     padding: 12px 22px;
     font-size: 0.905rem;
@@ -252,20 +270,25 @@ div.conv-form-wrapper  div#messages div.message {
     max-width: 65%;
     word-wrap: break-word;
 }
-div.conv-form-wrapper  div#messages div.message.to {
+
+div.conv-form-wrapper div#messages div.message.to {
     background: #efefef;
     color: #6f6f6f;
     float: left;
     border-top-left-radius: 0;
 }
+
 div.conv-form-wrapper div#messages div.message.from {
     background: #06b79a;
     color: #fff;
     border-top-right-radius: 0;
 }
-.message.to+.message.from, .message.from+.message.to {
+
+.message.to+.message.from,
+.message.from+.message.to {
     margin-top: 15px;
 }
+
 @keyframes slideTop {
     0% {
         margin-bottom: -25px;
@@ -283,13 +306,16 @@ div.conv-form-wrapper div#messages div.message.from {
         transform: scale(1.0, 1.0);
     }
 }
+
 div.conv-form-wrapper div.options div.option:hover {
     background: #eeeeee;
 }
+
 div.conv-form-wrapper div.options div.option.selected {
     background: #06b79a;
     color: #fff;
 }
+
 div.conv-form-wrapper div.options div.option.selected:hover {
     background: #069c7f;
 }
@@ -310,7 +336,6 @@ form.convFormDynamic button.submit {
     outline: none !important;
 }
 
-
 form.convFormDynamic button.submit:hover {
     background: #06b79a;
     color: #fff;
@@ -319,18 +344,23 @@ form.convFormDynamic button.submit:hover {
 button.submit.glow {
     box-shadow: 0 0 10px 5px rgba(6, 197, 166, 0.4);
 }
+
 .no-border {
     border: none !important;
 }
+
 .dragscroll {
     cursor: grab;
 }
-div.conv-form-wrapper div#messages::-webkit-scrollbar, div#feed ul::-webkit-scrollbar {
+
+div.conv-form-wrapper div#messages::-webkit-scrollbar,
+div#feed ul::-webkit-scrollbar {
     width: 0px;
     /* remove scrollbar space */
     background: transparent;
     /* optional: just make scrollbar invisible */
 }
+
 span.clear {
     display: block;
     clear: both;
@@ -345,6 +375,7 @@ span.clear {
     width: 1em;
     height: 4em;
 }
+
 .spinLoader {
     color: #06c5a6 !important;
     text-indent: -9999em;
@@ -357,20 +388,24 @@ span.clear {
     -webkit-animation-delay: -0.16s;
     animation-delay: -0.16s;
 }
+
 .spinLoader:before,
 .spinLoader:after {
     position: absolute;
     top: 0;
     content: '';
 }
+
 .spinLoader:before {
     left: -1.5em;
     -webkit-animation-delay: -0.32s;
     animation-delay: -0.32s;
 }
+
 .spinLoader:after {
     left: 1.5em;
 }
+
 @-webkit-keyframes spinLoaderChat {
     0%,
     80%,
@@ -383,6 +418,7 @@ span.clear {
         height: 5em;
     }
 }
+
 @keyframes spinLoaderChat {
     0%,
     80%,
