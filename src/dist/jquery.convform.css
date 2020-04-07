@@ -230,15 +230,13 @@ div.conv-form-wrapper div.options div.option {
     padding: 7px 12px;
     border: 1px solid #75C045;
     display: block;
-    margin-right: 5px;
+    margin: 3px;
     background: #fff;
     color: #75C045;
     cursor: pointer;
     border-radius: 20px;
     font-size: 0.9rem;
     max-width: 50%;
-    float: right;
-    clear: both;
 }
 
 div.conv-form-wrapper div.message {
@@ -279,9 +277,9 @@ div.conv-form-wrapper div#messages div.message.to {
 }
 
 div.conv-form-wrapper div#messages div.message.from {
-    background: #06b79a;
-    color: #fff;
-    border-top-right-radius: 0;
+    border: 1px solid #75C045;
+    color: #75C045;
+    max-width: 50%;
 }
 
 .message.to+.message.from,
