@@ -147,7 +147,7 @@ div.conv-form-wrapper:before {
     top: 0;
     left: 0;
     z-index: 2;
-    background: linear-gradient(#fff, transparent);
+    background: #fff;
 }
 
 @media (max-width: 767px) {
@@ -165,6 +165,13 @@ div.conv-form-wrapper div.options::-webkit-scrollbar {
     /* remove scrollbar space */
     background: transparent;
     /* optional: just make scrollbar invisible */
+}
+
+img[alt=animals] {
+    width: 90%;
+    height: 50%;
+    position: absolute;
+    top: 40%;
 }
 
 .card {
@@ -276,6 +283,7 @@ div.conv-form-wrapper div#messages div.message.from {
     border: 1px solid #75C045;
     color: #545454;
     max-width: 50%;
+    background: #fff;
 }
 
 .message.to+.message.from,
