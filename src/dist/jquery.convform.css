@@ -80,7 +80,6 @@ form.convFormDynamic {
     margin: 10px auto 15px;
     padding: 0 !important;
     position: relative;
-    box-shadow: 0 0 5px 5px rgba(222, 222, 222, 0.4);
 }
 
 form.convFormDynamic textarea.userInputDynamic {
@@ -93,22 +92,7 @@ form.convFormDynamic textarea.userInputDynamic {
     line-height: 1.3em;
     min-height: 1.7em;
     max-height: 10rem;
-    display: block;
-    max-width: 88%;
-    margin-right: 2.5%;
-}
-
-form.convFormDynamic input.userInputDynamic {
-    border: none;
-    padding: 7px 10px;
-    outline: none;
-    font-size: 0.905rem;
-    float: left;
-    width: calc(100% - 70px);
-    line-height: 1.3em;
-    min-height: 1.7em;
-    max-height: 10rem;
-    display: block;
+    display: none;
     max-width: 88%;
     margin-right: 2.5%;
 }
@@ -143,6 +127,7 @@ div.conv-form-wrapper div#messages:after {
 
 div.conv-form-wrapper {
     position: relative;
+    padding: 20px;
 }
 
 div.conv-form-wrapper div.wrapper-messages {
@@ -180,6 +165,18 @@ div.conv-form-wrapper div.options::-webkit-scrollbar {
     /* remove scrollbar space */
     background: transparent;
     /* optional: just make scrollbar invisible */
+}
+
+.card {
+    border-radius: 20px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.card-header {
+    border-bottom: 4px solid #5B9B42;
+    padding: 10px;
+    text-align: center;
 }
 
 input[type="text"].userInputDynamic.error {
@@ -331,6 +328,7 @@ form.convFormDynamic button.submit {
     margin-top: 4px;
     background: #fff;
     outline: none !important;
+    display: none;
 }
 
 form.convFormDynamic button.submit:hover {
