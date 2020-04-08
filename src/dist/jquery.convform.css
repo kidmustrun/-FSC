@@ -1,3 +1,7 @@
+#demo {
+    overflow: hidden;
+}
+
 .typing_loader {
     width: 6px;
     height: 6px;
@@ -83,18 +87,7 @@ form.convFormDynamic {
 }
 
 form.convFormDynamic textarea.userInputDynamic {
-    border: none;
-    padding: 7px 10px;
-    outline: none;
-    font-size: 0.905rem;
-    float: left;
-    width: calc(100% - 70px);
-    line-height: 1.3em;
-    min-height: 1.7em;
-    max-height: 10rem;
     display: none;
-    max-width: 88%;
-    margin-right: 2.5%;
 }
 
 div.conv-form-wrapper:after {
@@ -323,19 +316,6 @@ div.conv-form-wrapper div.options div.option.selected:hover {
 }
 
 form.convFormDynamic button.submit {
-    padding: 3px;
-    border: none;
-    float: left;
-    margin: 5px;
-    color: #06c5a6;
-    cursor: pointer;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    width: 36px;
-    height: 35px;
-    margin-top: 4px;
-    background: #fff;
-    outline: none !important;
     display: none;
 }
 
