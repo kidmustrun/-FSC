@@ -446,10 +446,6 @@ a.contacts .row {
     text-align: center;
 }
 
-a.contacts:hover {
-    color: rgb(84, 153, 42);
-}
-
 @-webkit-keyframes spinLoaderChat {
     0%,
     80%,
