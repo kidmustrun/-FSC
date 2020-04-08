@@ -238,6 +238,7 @@ div.conv-form-wrapper div.options div.option {
     border-radius: 20px;
     font-size: 0.9rem;
     max-width: 50%;
+    animation: border infinite 3s ease-in-out;
 }
 
 div.conv-form-wrapper div.message {
@@ -427,6 +428,7 @@ a.contacts {
     flex-direction: column;
     justify-content: center;
     z-index: 1;
+    animation: border 3s infinite ease-in-out;
 }
 
 .col-sm-4 {
@@ -471,5 +473,17 @@ a.contacts:hover {
     40% {
         box-shadow: 0 -2em;
         height: 5em;
+    }
+}
+
+@keyframes border {
+    0% {
+        border-color: #75C045;
+    }
+    50% {
+        border-color: #add991;
+    }
+    100% {
+        border-color: #75C045;
     }
 }
