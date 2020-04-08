@@ -169,9 +169,8 @@ div.conv-form-wrapper div.options::-webkit-scrollbar {
 
 img[alt=animals] {
     width: 90%;
-    height: 50%;
     position: absolute;
-    top: 40%;
+    top: 50%;
 }
 
 .card {
@@ -412,13 +411,14 @@ span.clear {
 .contacts-wrapper {
     display: flex;
     justify-content: space-around;
-    padding-bottom: 10px;
+    padding: 10px;
 }
 
 a.contacts {
     display: flex;
     padding: 3px;
     border-radius: 20px;
+    background-color: #fff;
     border: 3px solid #75C045;
     color: #75C045;
     font-size: 18px;
@@ -426,15 +426,16 @@ a.contacts {
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    z-index: 1;
 }
 
 .col-sm-4 {
-    padding: 5px !important;
+    padding: 2px !important;
     justify-content: center;
 }
 
 .col-sm-8 {
-    padding: 5px !important;
+    padding: 2px !important;
     justify-content: center;
 }
 
