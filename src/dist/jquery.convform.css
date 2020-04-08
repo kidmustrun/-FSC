@@ -428,7 +428,7 @@ a.contacts {
     flex-direction: column;
     justify-content: center;
     z-index: 1;
-    animation: border 3s infinite ease-in-out;
+    animation: border 3s infinite ease-in-out, text-animation 3s infinite ease-in-out, opacity-img 3s infinite ease-in-out;
 }
 
 .col-sm-4 {
@@ -481,9 +481,33 @@ a.contacts:hover {
         border-color: #75C045;
     }
     50% {
-        border-color: #add991;
+        border-color: #70ba3c;
     }
     100% {
         border-color: #75C045;
+    }
+}
+
+@keyframes text-animation {
+    0% {
+        color: #75C045;
+    }
+    50% {
+        color: #70ba3c;
+    }
+    100% {
+        color: #75C045;
+    }
+}
+
+@keyframes opacity-img {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
     }
 }
