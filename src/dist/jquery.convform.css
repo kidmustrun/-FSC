@@ -150,6 +150,20 @@ div.conv-form-wrapper:before {
     }
 }
 
+@media (max-height: 600px) {
+    div.conv-form-wrapper {
+        max-height: 73vh;
+    }
+    a.contacts {
+        height: 15vh;
+        font-size: 12px;
+        padding: 4px;
+    }
+    a.contacts img {
+        height: 30px;
+    }
+}
+
 div.conv-form-wrapper div.wrapper-messages::-webkit-scrollbar,
 div#feed ul::-webkit-scrollbar,
 div.conv-form-wrapper div.options::-webkit-scrollbar {
