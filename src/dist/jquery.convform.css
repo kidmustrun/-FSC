@@ -209,6 +209,15 @@ div.conv-form-wrapper div.options {
     width: 100%;
 }
 
+@media screen and (max-height:600) {
+    div.conv-form-wrapper div#messages {
+        bottom: 30vh;
+    }
+    div.conv-form-wrapper div.options {
+        bottom: 30vh;
+    }
+}
+
 div.conv-form-wrapper div.options:after {
     content: '';
     display: table;
