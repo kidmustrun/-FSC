@@ -104,6 +104,7 @@ div.conv-form-wrapper div#messages {
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    padding-top: 10%;
     /* IE 11 */
 }
 
@@ -229,7 +230,7 @@ div.conv-form-wrapper div.options div.option {
     padding: 7px 12px;
     border: 1px solid #75C045;
     display: block;
-    margin: 3px;
+    margin-left: 7%;
     background: #fff;
     color: #545454;
     cursor: pointer;
@@ -266,7 +267,7 @@ div.conv-form-wrapper div#messages div.message {
     clear: both;
     max-width: 65%;
     word-wrap: break-word;
-    margin-left: 5%;
+    margin-left: 10%;
 }
 
 #rec {
@@ -275,6 +276,13 @@ div.conv-form-wrapper div#messages div.message {
     margin-top: -24px;
     position: absolute;
     right: 0;
+}
+
+#site {
+    border-radius: 100%;
+    border: 2px solid rgb(84, 153, 42);
+    position: absolute;
+    left: 0;
 }
 
 div.conv-form-wrapper div#messages div.message.to {

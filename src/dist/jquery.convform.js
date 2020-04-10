@@ -90,8 +90,12 @@ ConvState.prototype.printQuestion = function() {
     }
     var messageObj = $(this.wrapper).find('.message.typing');
     setTimeout(function() {
+
         messageObj.html(question);
+        var heightMessage = ($(messageObj).height()+10)*(-1);
+        $(messageObj).append($('<svg id="site" class="bi bi-circle" width="2em" height="2em" viewBox="0 0 16 16" fill="rgb(84, 153, 42)" xmlns="http://www.w3.org/2000/svg" style="margin-top:'+ heightMessage + 'px;"><path fill-rule="nonzero" fill="white"  d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"/><image x="2" y="2" width="12" height="12" xlink:href="media/site.png"></svg>'));
         messageObj.removeClass('typing').addClass('ready');
+        
         if (this.current.input.type == "select") {
             this.printAnswers(this.current.input.answers, this.current.input.multiple);
         }
@@ -110,7 +114,7 @@ ConvState.prototype.printQuestion = function() {
         }
         $(this.wrapper).find(this.parameters.inputIdHashTagName).focus();
     }.bind(this), 500);
-    
+
 };
 ConvState.prototype.printAnswers = function(answers, multiple) {
     var opened = false;
@@ -532,5 +536,5 @@ ConvState.prototype.answerWith = function(answerText, answerObject) {
             return false;
         }
     }
-    
+
 })(jQuery);
