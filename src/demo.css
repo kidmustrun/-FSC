@@ -5,10 +5,10 @@
 html,
 body {
     font-size: 16px;
+    background: #19295f;
 }
 
 section#demo {
-    background: #19295f;
     position: relative;
     padding: 0;
     min-height: 100vh;

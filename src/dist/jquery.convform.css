@@ -420,6 +420,77 @@ a.contacts .row {
     text-align: center;
 }
 
+.window {
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+}
+
+.window .card {
+    border-radius: 23px !important;
+    height: 20vh !important;
+}
+
+.window .card .card-body .card-title {
+    padding: 1vh 1vw;
+    background-color: #5B9B42;
+    border-radius: 23px 23px 0 0;
+    color: #fff;
+}
+
+.window .card .card-body .min-message {
+    padding: 1vh 1vw;
+    border: 1px solid #75C045;
+    color: #545454;
+    max-width: 50%;
+    background: #fff;
+    border-radius: 20px;
+    margin: 1vh 1vw;
+}
+
+.window .card .card-body .min-button {
+    padding: 1vh 1vw;
+    border: 1px solid #75C045;
+    color: #545454;
+    max-width: 50%;
+    background: #fff;
+    border-radius: 20px;
+    margin: 1vh 1vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.window .card .card-body .min-button:hover {
+    background-color: #5B9B42;
+    color: #fff;
+    border: none;
+}
+
+.window-min {
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    border: 3px solid #5B9B42;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.window-min img {
+    margin: auto;
+    width: 60%;
+}
+
+.none {
+    display: none;
+}
+
 @-webkit-keyframes spinLoaderChat {
     0%,
     80%,
