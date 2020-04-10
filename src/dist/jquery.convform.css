@@ -125,7 +125,7 @@ div.conv-form-wrapper {
 
 div.conv-form-wrapper div.wrapper-messages {
     position: relative;
-    height: 577px;
+    height: 50vh;
     max-height: 71vh;
     overflow-y: scroll;
     transition: margin 0.1s;
@@ -206,6 +206,7 @@ div.conv-form-wrapper div.options {
     white-space: nowrap;
     position: absolute;
     bottom: 0;
+    height: auto !important;
     width: 100%;
 }
 
@@ -442,7 +443,7 @@ a.contacts .row {
     padding: 1vh 1vw;
     border: 1px solid #75C045;
     color: #545454;
-    max-width: 50%;
+    width: 70%;
     background: #fff;
     border-radius: 20px;
     margin: 1vh 1vw;
@@ -489,6 +490,23 @@ a.contacts .row {
 
 .none {
     display: none;
+}
+
+.animation-appearance {
+    animation: appearance 0.5s ease-in-out;
+}
+
+.animation-disappearance {
+    animation: appearance 0.5s ease-in-out reverse;
+}
+
+@keyframes appearance {
+    0% {
+        transform: scale(0, 0);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
 }
 
 @-webkit-keyframes spinLoaderChat {

@@ -161,33 +161,6 @@
             }
             ready();
         }
-        $(document).ready(function() {
-
-            $("#window_min").click(function() {
-
-                $("#window_min").toggleClass("none");
-                $("#window").toggleClass("none");
-
-            });
-            $("#close_small").click(function() {
-
-                $("#window_min").toggleClass("none");
-                $("#window").toggleClass("none");
-
-            });
-            $("#close_big").click(function() {
-
-                $("#demo").toggleClass("none");
-                $("#window").toggleClass("none");
-
-            });
-            $("#help").click(function() {
-
-                $("#demo").toggleClass("none");
-                $("#window").toggleClass("none");
-
-            });
-        });
     </script>
     <script>
         jQuery(function($) {
@@ -195,6 +168,39 @@
                 selectInputStyle: 'disable'
             });
             console.log(convForm);
+        });
+        $(document).ready(function() {
+
+            $("#window_min").click(function() {
+
+                $("#window_min").toggleClass("none");
+                $("#window").toggleClass("none");
+                $("#window").addClass("animation-appearance");
+                $("#window_min").removeClass("animation-appearance");
+
+
+            });
+            $("#close_small").click(function() {
+                $("#window").removeClass("animation-appearance");
+                $("#window_min").toggleClass("none");
+                $("#window_min").addClass("animation-appearance");
+                $("#window").toggleClass("none");
+            });
+            $("#close_big").click(function() {
+
+                $("#demo").toggleClass("none");
+                $("#window").toggleClass("none");
+                $("#demo").removeClass("animation-appearance");
+                $("#window").addClass("animation-appearance");
+
+            });
+            $("#help").click(function() {
+                $("#demo").toggleClass("none");
+                $("#window").toggleClass("none");
+                $("#demo").addClass("animation-appearance");
+                $("#window").removeClass("animation-appearance");
+
+            });
         });
     </script>
 </body>
