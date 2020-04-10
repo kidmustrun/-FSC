@@ -231,6 +231,7 @@ div.conv-form-wrapper div.options div.option {
     border: 1px solid #75C045;
     display: block;
     margin-left: 7%;
+    margin-top: 5px;
     background: #fff;
     color: #545454;
     cursor: pointer;
@@ -267,7 +268,7 @@ div.conv-form-wrapper div#messages div.message {
     clear: both;
     max-width: 65%;
     word-wrap: break-word;
-    margin-left: 10%;
+    margin-left: 7%;
 }
 
 #rec {
