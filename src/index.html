@@ -163,12 +163,6 @@
         }
     </script>
     <script>
-        jQuery(function($) {
-            convForm = $('#chat').convform({
-                selectInputStyle: 'disable'
-            });
-            console.log(convForm);
-        });
         $(document).ready(function() {
 
             $("#window_min").click(function() {
@@ -199,6 +193,12 @@
                 $("#window").toggleClass("none");
                 $("#demo").addClass("animation-appearance");
                 $("#window").removeClass("animation-appearance");
+                jQuery(function($) {
+                    convForm = $('#chat').convform({
+                        selectInputStyle: 'disable'
+                    });
+                    console.log(convForm);
+                });
 
             });
         });
