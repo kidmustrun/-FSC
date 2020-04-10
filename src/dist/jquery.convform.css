@@ -201,7 +201,6 @@ div.conv-form-wrapper div#messages {
     /*max-height: 71vh;*/
 }
 
-
 div.conv-form-wrapper div.options {
     word-wrap: normal;
     white-space: nowrap;
@@ -267,8 +266,10 @@ div.conv-form-wrapper div#messages div.message {
     clear: both;
     max-width: 65%;
     word-wrap: break-word;
+    margin-left: 5%;
 }
-#rec{
+
+#rec {
     border-radius: 100%;
     border: 2px solid rgb(84, 153, 42);
     margin-top: -24px;
@@ -277,7 +278,6 @@ div.conv-form-wrapper div#messages div.message {
 }
 
 div.conv-form-wrapper div#messages div.message.to {
-    margin-left: 30px;
     background: #FFFFFF;
     color: #545454;
     float: left;
