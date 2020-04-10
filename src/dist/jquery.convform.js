@@ -110,6 +110,7 @@ ConvState.prototype.printQuestion = function() {
         }
         $(this.wrapper).find(this.parameters.inputIdHashTagName).focus();
     }.bind(this), 500);
+    
 };
 ConvState.prototype.printAnswers = function(answers, multiple) {
     var opened = false;
@@ -202,7 +203,7 @@ ConvState.prototype.answerWith = function(answerText, answerObject) {
     //prints answer within messages wrapper
     if (this.current.input.type == 'password')
         answerText = answerText.replace(/./g, '*');
-    var message = $('<div class="message from">' + answerText + '</div>');
+    var message = $('<div class="message from"><svg id="rec" class="bi bi-circle" width="2em" height="2em" viewBox="0 0 16 16" fill="rgb(84, 153, 42)" xmlns="http://www.w3.org/2000/svg"><path fill-rule="nonzero" fill="white"  d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"/><image x="2" y="2" width="12" height="12" xlink:href="media/rec.png"></svg>' + answerText + '</div>');
 
     if (this.current.input.type == 'select' && this.parameters.selectInputStyle == 'disable') {
         $(this.wrapper).find('#' + this.parameters.inputIdName).prop('disabled', false);
@@ -531,4 +532,5 @@ ConvState.prototype.answerWith = function(answerText, answerObject) {
             return false;
         }
     }
+    
 })(jQuery);

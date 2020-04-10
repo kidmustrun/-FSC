@@ -201,6 +201,7 @@ div.conv-form-wrapper div#messages {
     /*max-height: 71vh;*/
 }
 
+
 div.conv-form-wrapper div.options {
     word-wrap: normal;
     white-space: nowrap;
@@ -267,8 +268,16 @@ div.conv-form-wrapper div#messages div.message {
     max-width: 65%;
     word-wrap: break-word;
 }
+#rec{
+    border-radius: 100%;
+    border: 2px solid rgb(84, 153, 42);
+    margin-top: -24px;
+    position: absolute;
+    right: 0;
+}
 
 div.conv-form-wrapper div#messages div.message.to {
+    margin-left: 30px;
     background: #FFFFFF;
     color: #545454;
     float: left;
@@ -277,6 +286,7 @@ div.conv-form-wrapper div#messages div.message.to {
 }
 
 div.conv-form-wrapper div#messages div.message.from {
+    margin-right: 37px;
     border: 1px solid #75C045;
     color: #545454;
     max-width: 50%;
