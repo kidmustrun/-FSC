@@ -13,316 +13,308 @@
 <body>
     <section id="demo" class="none">
         <div class="vertical-align">
-
             <div class="row">
                 <div class="col-md-4 col-lg-3 pull-right col-xs-offset-0 col-xs-12">
                     <div class="card bg-light">
                         <div class="card-header">Онлайн-консультант<button type="button" class="close" id="close_big">
                                 <span aria-hidden="true">&times;</span></button></div>
-                        <div id="chat" class="conv-form-wrapper">
-                            <img src="media/animals.png" alt="animals">
-                            <form action="" method="GET" class="hidden">
-                                <select data-conv-question="Здравствуйте,я помощник компании FCS.Что вы хотите узнать?" name="first-question">
-                                    <option value="yes">Стоимость услуг</option>
-                                    <option value="no">Вопросы по получению сертификации</option>
-                                    <option value="may">О компании</option>
-                                </select>
-
-                                <div data-conv-fork="first-question">
-                                    <div data-conv-case="yes">
-                                        <select name="cost" data-conv-question="Выберите вопрос,который вас интересует">
-                                            <option value="on">Сколько стоит сертификация?</option>
-                                            <option value="tw">Сколько стоят услуги органа по сертификации?</option>
-                                            <option value="thr">Обратно к списку</option>
-                                        </select>
-
-                                    </div>
-                                    <div data-conv-case="no">
-                                        <select name="certificate" data-conv-question="Выберите вопрос,который вас интересует">
-                                            <option value="a">Основные вопросы по получению сертификации </option>
-                                            <option value="b">Сколько времени занимает получение сертификата? </option>
-                                            <option value="c">Как выбрать орган по сертификации?</option>
-                                            <option value="d">Орган сертификации проконсультирует нас,как выполнять ваши
-                                                стандарты?</option>
-                                            <option value="i">Ещё вопросы </option>
-
-                                        </select>
-                                    </div>
-                                    <div data-conv-case="may">
-                                        <select name="company" data-conv-question="Выберите вопрос,который вас интересует">
-                                            <option value="one">Где и как пройти обучение?</option>
-                                            <option value="two">С чего нам начать?</option>
-                                            <option value="three">Подскажите пожалуйста,есть ли у вас региональные
-                                                специалисты?</option>
-                                            <option value="ten">Ещё вопросы</option>
-
-                                        </select>
-
-                                    </div>
-                                </div>
-
-                                <div data-conv-fork="certificate">
-                                    <div data-conv-case="i">
-                                        <select name="prodcertific" data-conv-question="Выберите вопрос,который вас интересует">
-                                            <option value="e">Что делать ,если в моём городе нет органов по
-                                                сертификации/консультантов?</option>
-                                            <option value="f">Можем ли мы получить сертификат лесоуправления,если мы всё
-                                                делаем строго по законодательству?</option>
-                                            <option value="g">Кто выдаёт сертификаты?</option>
-                                            <option value="h">Обратно к списку</option>
-                                        </select>
-                                    </div>
-
-                                    <div data-conv-case="a">
-                                        <select name="questine" data-conv-question="Выберите вопрос, который вас интересует">
-                                            <option value="mc">В чём суть сертификации лесоуправления?</option>
-                                            <option value="mv">В чём суть сертификации цепочек поставок?</option>
-                                            <option value="mb">Как выяснить, есть ли сертификаты FSC у моих
-                                                поставщиков?</option>
-                                            <option value="mn">Обратно к списку</option>
-                                        </select>
-                                    </div>
-
-                                </div>
-
-                                <div data-conv-fork="company">
-                                    <div data-conv-case="ten">
-                                        <select name="system" data-conv-question="Выберите вопрос,который вас интересует">
-                                            <option value="four">Естли мы используем только сертифицированное сырьё...?
-                                            </option>
-                                            <option value="five">FSC - это иностранная система?</option>
-                                            <option value="six">Могу ли я продавать свою продукцию за границу без
-                                                сертификата FSC?</option>
-                                            <option value="seven">Обратно к списку</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <!--Вторая часть .Ответы на вопрос.-->
-
-
-                                <div data-conv-fork="cost">
-                                    <div data-conv-case="on">
-                                        <input type="text" data-conv-question="Ответ" data-no-answer="true">
-                                        <select name="Otvone" data-conv-question="Мы смогли ответить на ваш вопрос?">
-
-                                            <option value="qw">Да</option>
-                                            <option value="qe">Нет</option>
-
-
-                                        </select>
-                                    </div>
-
-                                    <div data-conv-case="tw">
-                                        <input type="text" data-conv-question="Ответ" data-no-answer="true">
-                                        <select name="Otvty" data-conv-question="Мы смогли ответить на ваш вопрос?">
-
-                                            <option value="qr">Да</option>
-                                            <option value="qt">Нет</option>
-
-
-                                        </select>
-                                    </div>
-
-                                </div>
-
-                                <div data-conv-fork="certificate">
-
-
-                                    <div data-conv-case="b">
-                                        <input type="text" data-conv-question="Ответ" data-no-answer="true">
-                                        <select name="otthr" data-conv-question="Мы смогли ответить на ваш вопрос?">
-                                            <option value="as">Да</option>
-                                            <option value="ad">Нет</option>
-
-                                        </select>
-                                    </div>
-
-                                    <div data-conv-case="c">
-                                        <input type="text" data-conv-question="Ответ" data-no-answer="true">
-                                        <select name="otthr" data-conv-question="Мы смогли ответить на ваш вопрос?">
-                                            <option value="af">Да</option>
-                                            <option value="ag">Нет</option>
-
-                                        </select>
-                                    </div>
-
-                                    <div data-conv-case="d">
-                                        <input type="text" data-conv-question="Ответ" data-no-answer="true">
-                                        <select name="otthr" data-conv-question="Мы смогли ответить на ваш вопрос?">
-                                            <option value="ah">Да</option>
-                                            <option value="aj">Нет</option>
-
-                                        </select>
-                                    </div>
-
-                                </div>
-                                <!-- -->
-
-                                <div data-conv-fork="questine">
-                                    <div data-conv-case="mc">
-                                        <input type="text" data-conv-question="Ответ" data-no-answer="true">
-                                        <select name="otthr" data-conv-question="Мы смогли ответить на ваш вопрос?">
-                                            <option value="ak">Да</option>
-                                            <option value="al">Нет</option>
-
-                                        </select>
-                                    </div>
-
-                                    <div data-conv-case="mv">
-                                        <input type="text" data-conv-question="Ответ" data-no-answer="true">
-                                        <select name="otthr" data-conv-question="Мы смогли ответить на ваш вопрос?">
-                                            <option value="lk">Да</option>
-                                            <option value="lj">Нет</option>
-
-                                        </select>
-                                    </div>
-                                    <div data-conv-case="mb">
-                                        <input type="text" data-conv-question="Ответ" data-no-answer="true">
-                                        <select name="otthr" data-conv-question="Мы смогли ответить на ваш вопрос?">
-                                            <option value="lk">Да</option>
-                                            <option value="lj">Нет</option>
-
-                                        </select>
-                                    </div>
-                                </div>
-
-
-
-
-
-                                <div data-conv-fork="prodcertific">
-                                    <div data-conv-case="e">
-                                        <input type="text" data-conv-question="Ответ" data-no-answer="true">
-                                        <select name="otthr" data-conv-question="Мы смогли ответить на ваш вопрос?">
-                                            <option value="ak">Да</option>
-                                            <option value="al">Нет</option>
-
-                                        </select>
-                                    </div>
-
-                                    <div data-conv-case="f">
-                                        <input type="text" data-conv-question="Ответ" data-no-answer="true">
-                                        <select name="otthr" data-conv-question="Мы смогли ответить на ваш вопрос?">
-                                            <option value="lk">Да</option>
-                                            <option value="lj">Нет</option>
-
-                                        </select>
-                                    </div>
-                                    <div data-conv-case="g">
-                                        <input type="text" data-conv-question="Ответ" data-no-answer="true">
-                                        <select name="otthr" data-conv-question="Мы смогли ответить на ваш вопрос?">
-                                            <option value="lk">Да</option>
-                                            <option value="lj">Нет</option>
-
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div data-conv-fork="system">
-                                    <div data-conv-case="four">
-                                        <input type="text" data-conv-question="Ответ" data-no-answer="true">
-                                        <select name="pr" data-conv-question="Мы смогли ответить на ваш вопрос?">
-                                            <option value="kg">Да</option>
-                                            <option value="kf">Нет</option>
-
-                                        </select>
-                                    </div>
-
-                                    <div data-conv-case="five">
-                                        <input type="text" data-conv-question="Ответ" data-no-answer="true">
-                                        <select name="pt" data-conv-question="Мы смогли ответить на ваш вопрос?">
-                                            <option value="kd">Да</option>
-                                            <option value="ks">Нет</option>
-
-                                        </select>
-                                    </div>
-
-                                    <div data-conv-case="six">
-                                        <input type="text" data-conv-question="Ответ" data-no-answer="true">
-                                        <select name="py" data-conv-question="Мы смогли ответить на ваш вопрос?">
-                                            <option value="jh">Да</option>
-                                            <option value="jg">Нет</option>
-
-                                        </select>
-                                    </div>
-                                </div>
-
-
-                                <div data-conv-fork="company">
-                                    <div data-conv-case="one">
-                                        <input type="text" data-conv-question="Ответ" data-no-answer="true">
-                                        <select name="pr" data-conv-question="Мы смогли ответить на ваш вопрос?">
-                                            <option value="jf">Да</option>
-                                            <option value="jd">Нет</option>
-
-                                        </select>
-                                    </div>
-
-                                    <div data-conv-case="two">
-                                        <input type="text" data-conv-question="Ответ" data-no-answer="true">
-                                        <select name="pt" data-conv-question="Мы смогли ответить на ваш вопрос?">
-                                            <option value="hg">Да</option>
-                                            <option value="hf">Нет</option>
-
-                                        </select>
-                                    </div>
-
-                                    <div data-conv-case="three">
-                                        <input type="text" data-conv-question="Ответ" data-no-answer="true">
-                                        <select name="py" data-conv-question="Мы смогли ответить на ваш вопрос?">
-                                            <option value="hd">Да</option>
-                                            <option value="hs">Нет</option>
-
-                                        </select>
-                                    </div>
-                                </div>
-
-                            </form>
-
-                        </div>
-                        <div class="contacts-wrapper">
-                            <a href="https://ru.fsc.org/ru-ru/o_nas/kontakty" class="contacts">
-                                <div class="container-fluid">
-                                    <div class="row">
-
-                                        <img src="media/phone.png" alt="phone">
-
-
-                                        <span>Узнать номер</span>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="https://ru.fsc.org/ru-ru/o_nas/kontakty" class="contacts">
-                                <div class="container-fluid">
-                                    <div class="row">
-
-                                        <img src="media/geo.png" alt="geo">
-
-
-                                        <span>Узнать адрес</span>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="https://ru.fsc.org/ru-ru/o_nas/kontakty" class="contacts">
-                                <div class="container-fluid">
-                                    <div class="row">
-
-                                        <img src="media/mail.png" alt="mail">
-
-
-                                        <span>Узнать почту</span>
-
-                                    </div>
-                                </div>
-                            </a>
+                            <div id="chat" class="conv-form-wrapper">
+                                <img src="media/animals.png" alt="animals">
+                                <form action="" method="GET" class="hidden">
+                                                                                                                                            
+                                        <div data-conv-fork="to-begin">                          
+                                            <div data-conv-case="to-begin-option">                      
+                                                <select data-conv-question="Здравствуйте,я помощник компании FCS.Что вы хотите узнать?" name="first-question">
+                                                    <option value="yes">Стоимость услуг</option>
+                                                    <option value="no">Вопросы по получению сертификации</option>
+                                                    <option value="may">О компании</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div data-conv-fork="first-question">
+                                            <div data-conv-case="yes">
+                                                <select name="cost" data-conv-question="Выберите вопрос,который вас интересует">
+                                                    <option value="on">Сколько стоит сертификация?</option>
+                                                    <option value="tw">Сколько стоят услуги органа по сертификации?</option>
+                                                    <option value="thr">Обратно к списку</option>
+                                                </select>
+                                            </div>
+                                            <div data-conv-case="no">
+                                                <select name="certificate" data-conv-question="Выберите вопрос,который вас интересует">
+                                                    <option value="a">Основные вопросы по получению сертификации </option>
+                                                    <option value="b">Сколько времени занимает получение сертификата? </option>
+                                                    <option value="c">Как выбрать орган по сертификации?</option>
+                                                    <option value="d">Орган сертификации проконсультирует нас,как выполнять ваши
+                                                        стандарты?</option>
+                                                    <option value="i">Ещё вопросы </option>
+
+                                                </select>
+                                            </div>
+                                            <div data-conv-case="may">
+                                                <select name="company" data-conv-question="Выберите вопрос,который вас интересует">
+                                                    <option value="one">Где и как пройти обучение?</option>
+                                                    <option value="two">С чего нам начать?</option>
+                                                    <option value="three">Подскажите пожалуйста,есть ли у вас региональные
+                                                        специалисты?</option>
+                                                    <option value="ten">Ещё вопросы</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div data-conv-fork="certificate">
+                                            <div data-conv-case="i">
+                                                <select name="prodcertific" data-conv-question="Выберите вопрос,который вас интересует">
+                                                    <option value="e">Что делать ,если в моём городе нет органов по
+                                                        сертификации/консультантов?</option>
+                                                    <option value="f">Можем ли мы получить сертификат лесоуправления,если мы всё
+                                                        делаем строго по законодательству?</option>
+                                                    <option value="g">Кто выдаёт сертификаты?</option>
+                                                    <option value="h">Обратно к списку</option>
+                                                </select>
+                                            </div>
+
+                                            <div data-conv-case="a">
+                                                <select name="questine" data-conv-question="Выберите вопрос, который вас интересует">
+                                                    <option value="mc">В чём суть сертификации лесоуправления?</option>
+                                                    <option value="mv">В чём суть сертификации цепочек поставок?</option>
+                                                    <option value="mb">Как выяснить, есть ли сертификаты FSC у моих
+                                                        поставщиков?</option>
+                                                    <option value="mn">Обратно к списку</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div data-conv-fork="company">
+                                            <div data-conv-case="ten">
+                                                <select name="system" data-conv-question="Выберите вопрос,который вас интересует">
+                                                    <option value="four">Если мы используем только сертифицированное сырьё...?
+                                                    </option>
+                                                    <option value="five">FSC - это иностранная система?</option>
+                                                    <option value="six">Могу ли я продавать свою продукцию за границу без
+                                                        сертификата FSC?</option>
+                                                    <option value="seven">Обратно к списку</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!--Вторая часть .Ответы на вопрос.-->
+
+                                        <div data-conv-fork="cost">
+
+                                            <div data-conv-case="on">
+                                                <input type="text" data-conv-question="Ответ" data-no-answer="true">
+                                                <select name="various" data-conv-question="Мы смогли ответить на ваш вопрос?">
+                                                    <option value="if-yes">Да</option>
+                                                    <option value="if-no">Нет</option>
+                                                </select>
+                                            </div>
+
+                                            <div data-conv-case="tw">
+                                                <input type="text" data-conv-question="Ответ" data-no-answer="true">
+                                                <select name="various" data-conv-question="Мы смогли ответить на ваш вопрос?">
+                                                    <option value="if-yes">Да</option>
+                                                    <option value="if-no">Нет</option>
+                                                </select>
+                                            </div>
+                                                              
+                                        </div>
+
+                                        <div data-conv-fork="certificate">
+
+
+                                            <div data-conv-case="b">
+                                                <input type="text" data-conv-question="Ответ" data-no-answer="true">
+                                                <select name="various" data-conv-question="Мы смогли ответить на ваш вопрос?">
+                                                    <option value="if-yes">Да</option>
+                                                    <option value="if-no">Нет</option>
+                                                </select>
+                                            </div>
+
+                                            <div data-conv-case="c">
+                                                <input type="text" data-conv-question="Ответ" data-no-answer="true">
+                                                <select name="various" data-conv-question="Мы смогли ответить на ваш вопрос?">
+                                                    <option value="if-yes">Да</option>
+                                                    <option value="if-no">Нет</option>
+                                                </select>
+                                            </div>
+
+                                            <div data-conv-case="d">
+                                                <input type="text" data-conv-question="Ответ" data-no-answer="true">
+                                                <select name="various" data-conv-question="Мы смогли ответить на ваш вопрос?">
+                                                    <option value="if-yes">Да</option>
+                                                    <option value="if-no">Нет</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                        <!-- -->
+
+                                        <div data-conv-fork="questine">
+                                            <div data-conv-case="mc">
+                                                <input type="text" data-conv-question="Ответ" data-no-answer="true">
+                                                <select name="various" data-conv-question="Мы смогли ответить на ваш вопрос?">
+                                                    <option value="if-yes">Да</option>
+                                                    <option value="if-no">Нет</option>
+                                                </select>
+                                            </div>
+
+                                            <div data-conv-case="mv">
+                                                <input type="text" data-conv-question="Ответ" data-no-answer="true">
+                                                <select name="various" data-conv-question="Мы смогли ответить на ваш вопрос?">
+                                                    <option value="if-yes">Да</option>
+                                                    <option value="if-no">Нет</option>
+                                                </select>
+                                            </div>
+                                            <div data-conv-case="mb">
+                                                <input type="text" data-conv-question="Ответ" data-no-answer="true">
+                                                <select name="various" data-conv-question="Мы смогли ответить на ваш вопрос?">
+                                                    <option value="if-yes">Да</option>
+                                                    <option value="if-no">Нет</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                        <div data-conv-fork="prodcertific">
+                                            <div data-conv-case="e">
+                                                <input type="text" data-conv-question="Ответ" data-no-answer="true">
+                                                <select name="various" data-conv-question="Мы смогли ответить на ваш вопрос?">
+                                                    <option value="if-yes">Да</option>
+                                                    <option value="if-no">Нет</option>
+                                                </select>
+                                            </div>
+
+                                            <div data-conv-case="f">
+                                                <input type="text" data-conv-question="Ответ" data-no-answer="true">
+                                                <select name="various" data-conv-question="Мы смогли ответить на ваш вопрос?">
+                                                    <option value="if-yes">Да</option>
+                                                    <option value="if-no">Нет</option>
+                                                </select>
+                                            </div>
+                                            <div data-conv-case="g">
+                                                <input type="text" data-conv-question="Ответ" data-no-answer="true">
+                                                <select name="various" data-conv-question="Мы смогли ответить на ваш вопрос?">
+                                                    <option value="if-yes">Да</option>
+                                                    <option value="if-no">Нет</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div data-conv-fork="system">
+                                            <div data-conv-case="four">
+                                                <input type="text" data-conv-question="Ответ" data-no-answer="true">
+                                                <select name="various" data-conv-question="Мы смогли ответить на ваш вопрос?">
+                                                    <option value="if-yes">Да</option>
+                                                    <option value="if-no">Нет</option>
+                                                </select>
+                                            </div>
+
+                                            <div data-conv-case="five">
+                                                <input type="text" data-conv-question="Ответ" data-no-answer="true">
+                                                <select name="various" data-conv-question="Мы смогли ответить на ваш вопрос?">
+                                                    <option value="if-yes">Да</option>
+                                                    <option value="if-no">Нет</option>
+                                                </select>
+                                            </div>
+
+                                            <div data-conv-case="six">
+                                                <input type="text" data-conv-question="Ответ" data-no-answer="true">
+                                                <select name="various" data-conv-question="Мы смогли ответить на ваш вопрос?">
+                                                    <option value="if-yes">Да</option>
+                                                    <option value="if-no">Нет</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+                                        <div data-conv-fork="company">
+                                            <div data-conv-case="one">
+                                                <input type="text" data-conv-question="Ответ" data-no-answer="true">
+                                                <select name="various" data-conv-question="Мы смогли ответить на ваш вопрос?">
+                                                    <option value="if-yes">Да</option>
+                                                    <option value="if-no">Нет</option>
+                                                </select>
+                                            </div>
+
+                                            <div data-conv-case="two">
+                                                <input type="text" data-conv-question="Ответ" data-no-answer="true">
+                                                <select name="various" data-conv-question="Мы смогли ответить на ваш вопрос?">
+                                                    <option value="if-yes">Да</option>
+                                                    <option value="if-no">Нет</option>
+                                                </select>
+                                            </div>
+
+                                            <div data-conv-case="three">
+                                                <input type="text" data-conv-question="Ответ" data-no-answer="true">
+                                                <select name="various" data-conv-question="Мы смогли ответить на ваш вопрос?">
+                                                    <option value="if-yes">Да</option>
+                                                    <option value="if-no">Нет</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    
+                                        <div data-conv-fork="various">
+                                            <div data-conv-case="if-yes">
+                                                <select name="to-begin" data-conv-question="Cпасибо за обращение! Надеюсь, что Вы нашли ответ на свой вопрос." >
+                                                    <option value="to-begin-option">Вернуться к началу</option>
+                                                </select>
+                                            </div>
+                                            <div data-conv-case="if-no">
+                                                <select name="to-begin" data-conv-question="Нам очень жаль, что вы не нашли ответ на свой вопрос. Попробуйте найти его еще раз." >
+                                                    <option value="to-begin-option">Вернуться к началу</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                                 
+                                </form>
+                            </div>
                         </div>
 
-                        </form>
-                    </div>
+                            <div class="contacts-wrapper">
+                                <a href="https://ru.fsc.org/ru-ru/o_nas/kontakty" class="contacts">
+                                    <div class="container-fluid">
+                                        <div class="row">
+
+                                            <img src="media/phone.png" alt="phone">
+
+
+                                            <span>Узнать номер</span>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://ru.fsc.org/ru-ru/o_nas/kontakty" class="contacts">
+                                    <div class="container-fluid">
+                                        <div class="row">
+
+                                            <img src="media/geo.png" alt="geo">
+
+
+                                            <span>Узнать адрес</span>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://ru.fsc.org/ru-ru/o_nas/kontakty" class="contacts">
+                                    <div class="container-fluid">
+                                        <div class="row">
+
+                                            <img src="media/mail.png" alt="mail">
+
+
+                                            <span>Узнать почту</span>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                 </div>
             </div>
+        </div>
     </section>
     <div class="window none" id="window">
         <div class="card" style="width: 18rem;">
