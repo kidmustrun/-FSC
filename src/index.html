@@ -21,23 +21,19 @@
                             <div id="chat" class="conv-form-wrapper">
                                 <img src="media/animals.png" alt="animals">
                                 <form action="" method="GET" class="hidden">
-                                                                                                                                            
-                                        <div data-conv-fork="to-begin">                          
-                                            <div data-conv-case="to-begin-option">                      
-                                                <select data-conv-question="Здравствуйте,я помощник компании FCS.Что вы хотите узнать?" name="first-question">
-                                                    <option value="yes">Стоимость услуг</option>
-                                                    <option value="no">Вопросы по получению сертификации</option>
-                                                    <option value="may">О компании</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
+                                                                                                                                                             
+                                        <select data-callback="storeState" data-conv-question="Здравствуйте,я помощник компании FCS.Что вы хотите узнать?" name="first-question">
+                                            <option value="yes">Стоимость услуг</option>
+                                            <option value="no">Вопросы по получению сертификации</option>
+                                            <option value="may">О компании</option>
+                                        </select>
+                                        
                                         <div data-conv-fork="first-question">
                                             <div data-conv-case="yes">
                                                 <select name="cost" data-conv-question="Выберите вопрос,который вас интересует">
                                                     <option value="on">Сколько стоит сертификация?</option>
                                                     <option value="tw">Сколько стоят услуги органа по сертификации?</option>
-                                                    <option value="thr">Обратно к списку</option>
+                                                    <option value="thr" data-callback="rollback">Обратно к списку</option>
                                                 </select>
                                             </div>
                                             <div data-conv-case="no">
@@ -70,7 +66,7 @@
                                                     <option value="f">Можем ли мы получить сертификат лесоуправления,если мы всё
                                                         делаем строго по законодательству?</option>
                                                     <option value="g">Кто выдаёт сертификаты?</option>
-                                                    <option value="h">Обратно к списку</option>
+                                                    <option value="h" data-callback="rollback">Обратно к списку</option>
                                                 </select>
                                             </div>
 
@@ -80,7 +76,7 @@
                                                     <option value="mv">В чём суть сертификации цепочек поставок?</option>
                                                     <option value="mb">Как выяснить, есть ли сертификаты FSC у моих
                                                         поставщиков?</option>
-                                                    <option value="mn">Обратно к списку</option>
+                                                    <option value="mn" data-callback="rollback">Обратно к списку</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -93,7 +89,7 @@
                                                     <option value="five">FSC - это иностранная система?</option>
                                                     <option value="six">Могу ли я продавать свою продукцию за границу без
                                                         сертификата FSC?</option>
-                                                    <option value="seven">Обратно к списку</option>
+                                                    <option value="seven" data-callback="rollback">Обратно к списку</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -259,13 +255,13 @@
                                     
                                         <div data-conv-fork="various">
                                             <div data-conv-case="if-yes">
-                                                <select name="to-begin" data-conv-question="Cпасибо за обращение! Надеюсь, что Вы нашли ответ на свой вопрос." >
-                                                    <option value="to-begin-option">Вернуться к началу</option>
+                                                <select data-conv-question="Cпасибо за обращение! Надеюсь, что Вы нашли ответ на свой вопрос." >
+                                                    <option data-callback="rollback">Вернуться к началу</option>
                                                 </select>
                                             </div>
                                             <div data-conv-case="if-no">
-                                                <select name="to-begin" data-conv-question="Нам очень жаль, что вы не нашли ответ на свой вопрос. Попробуйте найти его еще раз." >
-                                                    <option value="to-begin-option">Вернуться к началу</option>
+                                                <select data-conv-question="Нам очень жаль, что вы не нашли ответ на свой вопрос. Попробуйте найти его еще раз." >
+                                                    <option data-callback="rollback">Вернуться к началу</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -339,15 +335,17 @@
     <script type="text/javascript" src="dist/autosize.min.js"></script>
     <script type="text/javascript" src="dist/jquery.convform.js"></script>
     <script>
-        function google(stateWrapper, ready) {
-            window.open("https://google.com");
+
+        function toTheStart(stateWrapper, ready) {
+            window.open("to-begin");
             ready();
         }
-
-        function bing(stateWrapper, ready) {
+        
+	    function bing(stateWrapper, ready) {
             window.open("https://bing.com");
             ready();
-        }
+	    }
+
         var rollbackTo = false;
         var originalState = false;
 
