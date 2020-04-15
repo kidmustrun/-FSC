@@ -517,7 +517,7 @@
             height: 30px;
         }
         div.conv-form-wrapper div.options {
-            max-height: 30vh !important;
+            max-height: 25vh !important;
         }
     }
     
