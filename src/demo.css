@@ -5,22 +5,38 @@
 html,
 body {
     font-size: 16px;
-    background: blue;
+    background: #aaaaaa;
+}
+
+[class^="col-"] {
+    padding: 0 !important;
+}
+
+.row {
+    margin: 0 !important;
 }
 
 section#demo {
-    position: relative;
+    position: fixed;
     padding: 0;
     min-height: 100vh;
+    width: 100vw;
     transition: height 9999s;
+    top: 0;
+    right: 5vh;
 }
 
 .vertical-align {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 0;
-    width: 100%;
+    width: 100vw;
+}
+
+@media screen and (max-width: 600px) {
+    section#demo {
+        right: 0;
+    }
 }
 
 .card {
