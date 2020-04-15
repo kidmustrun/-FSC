@@ -32,17 +32,25 @@
                                         <select name="cost" data-conv-question="Выберите вопрос,который вас интересует">
                                             <option value="on">Сколько стоит сертификация?</option>
                                             <option value="tw">Сколько стоят услуги органа по сертификации?</option>
-                                            <option value="thr" data-callback="rollback">Обратно к списку</option>
+                                            <option value="thr" data-callback="restore">Выйти</option>
                                         </select>
                                     </div>
                                     <div data-conv-case="no">
                                         <select name="certificate" data-conv-question="Выберите вопрос,который вас интересует">
-                                            <option value="a">Основные вопросы по получению сертификации </option>
-                                            <option value="b">Сколько времени занимает получение сертификата? </option>
-                                            <option value="c">Как выбрать орган по сертификации?</option>
-                                            <option value="d">Орган сертификации проконсультирует нас,как выполнять ваши
+                                            <option value="a">В чём суть сертификации лесоуправления?</option>
+                                            <option value="b">В чём суть сертификации цепочек поставок?</option>
+                                            <option value="c">Как выяснить, есть ли сертификаты FSC у моих
+                                                поставщиков?</option>
+                                            <option value="d">Сколько времени занимает получение сертификата? </option>
+                                            <option value="e">Как выбрать орган по сертификации?</option>
+                                            <option value="f">Орган сертификации проконсультирует нас,как выполнять ваши
                                                 стандарты?</option>
-                                            <option value="i">Ещё вопросы </option>
+                                                <option value="j">Что делать ,если в моём городе нет органов по
+                                                    сертификации/консультантов?</option>
+                                                <option value="k">Можем ли мы получить сертификат лесоуправления,если мы всё
+                                                    делаем строго по законодательству?</option>
+                                                <option value="l">Кто выдаёт сертификаты?</option>
+                                                <option value="m" data-callback="restore">Выйти</option>
 
                                         </select>
                                     </div>
@@ -52,46 +60,19 @@
                                             <option value="two">С чего нам начать?</option>
                                             <option value="three">Подскажите пожалуйста,есть ли у вас региональные
                                                 специалисты?</option>
-                                            <option value="ten">Ещё вопросы</option>
+                                                <option value="four">Если мы используем только сертифицированное сырьё...?
+                                                </option>
+                                                <option value="five">FSC - это иностранная система?</option>
+                                                <option value="six">Могу ли я продавать свою продукцию за границу без
+                                                    сертификата FSC?</option>
+                                                <option value="seven" data-callback="restore">Выйти</option>
                                         </select>
                                     </div>
                                 </div>
 
-                                <div data-conv-fork="certificate">
-                                    <div data-conv-case="i">
-                                        <select name="prodcertific" data-conv-question="Выберите вопрос,который вас интересует">
-                                            <option value="e">Что делать ,если в моём городе нет органов по
-                                                сертификации/консультантов?</option>
-                                            <option value="f">Можем ли мы получить сертификат лесоуправления,если мы всё
-                                                делаем строго по законодательству?</option>
-                                            <option value="g">Кто выдаёт сертификаты?</option>
-                                            <option value="h" data-callback="rollback">Обратно к списку</option>
-                                        </select>
-                                    </div>
 
-                                    <div data-conv-case="a">
-                                        <select name="questine" data-conv-question="Выберите вопрос, который вас интересует">
-                                            <option value="mc">В чём суть сертификации лесоуправления?</option>
-                                            <option value="mv">В чём суть сертификации цепочек поставок?</option>
-                                            <option value="mb">Как выяснить, есть ли сертификаты FSC у моих
-                                                поставщиков?</option>
-                                            <option value="mn" data-callback="rollback">Обратно к списку</option>
-                                        </select>
-                                    </div>
-                                </div>
 
-                                <div data-conv-fork="company">
-                                    <div data-conv-case="ten">
-                                        <select name="system" data-conv-question="Выберите вопрос,который вас интересует">
-                                            <option value="four">Если мы используем только сертифицированное сырьё...?
-                                            </option>
-                                            <option value="five">FSC - это иностранная система?</option>
-                                            <option value="six">Могу ли я продавать свою продукцию за границу без
-                                                сертификата FSC?</option>
-                                            <option value="seven" data-callback="rollback">Обратно к списку</option>
-                                        </select>
-                                    </div>
-                                </div>
+
 
                                 <!--Вторая часть .Ответы на вопрос.-->
 
@@ -115,6 +96,12 @@
                                 <div data-conv-fork="certificate">
 
 
+                                    <div data-conv-case="a">
+                                        <select data-conv-question="Ответ.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+
                                     <div data-conv-case="b">
                                         <select data-conv-question="Ответ.">
                                             <option data-callback="restore">Выйти</option>
@@ -126,8 +113,32 @@
                                             <option data-callback="restore">Выйти</option>
                                         </select>
                                     </div>
-
                                     <div data-conv-case="d">
+                                        <select data-conv-question="Ответ.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+                                    <div data-conv-case="e">
+                                        <select data-conv-question="Ответ.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+                                    <div data-conv-case="f">
+                                        <select data-conv-question="Ответ.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+                                    <div data-conv-case="j">
+                                        <select data-conv-question="Ответ.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+                                    <div data-conv-case="k">
+                                        <select data-conv-question="Ответ.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+                                    <div data-conv-case="l">
                                         <select data-conv-question="Ответ.">
                                             <option data-callback="restore">Выйти</option>
                                         </select>
@@ -135,68 +146,6 @@
 
                                 </div>
                                 <!-- -->
-
-                                <div data-conv-fork="questine">
-                                    <div data-conv-case="mc">
-                                        <select data-conv-question="Ответ.">
-                                            <option data-callback="restore">Выйти</option>
-                                        </select>
-                                    </div>
-
-                                    <div data-conv-case="mv">
-                                        <select data-conv-question="Ответ.">
-                                            <option data-callback="restore">Выйти</option>
-                                        </select>
-                                    </div>
-                                    <div data-conv-case="mb">
-                                        <select data-conv-question="Ответ.">
-                                            <option data-callback="restore">Выйти</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-
-
-
-
-                                <div data-conv-fork="prodcertific">
-                                    <div data-conv-case="e">
-                                        <select data-conv-question="Ответ.">
-                                            <option data-callback="restore">Выйти</option>
-                                        </select>
-                                    </div>
-
-                                    <div data-conv-case="f">
-                                        <select data-conv-question="Ответ.">
-                                            <option data-callback="restore">Выйти</option>
-                                        </select>
-                                    </div>
-                                    <div data-conv-case="g">
-                                        <select data-conv-question="Ответ.">
-                                            <option data-callback="restore">Выйти</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div data-conv-fork="system">
-                                    <div data-conv-case="four">
-                                        <select data-conv-question="Ответ.">
-                                            <option data-callback="restore">Выйти</option>
-                                        </select>
-                                    </div>
-
-                                    <div data-conv-case="five">
-                                        <select data-conv-question="Ответ.">
-                                            <option data-callback="restore">Выйти</option>
-                                        </select>
-                                    </div>
-
-                                    <div data-conv-case="six">
-                                        <select data-conv-question="Ответ.">
-                                            <option data-callback="restore">Выйти</option>
-                                        </select>
-                                    </div>
-                                </div>
 
 
                                 <div data-conv-fork="company">
@@ -213,6 +162,23 @@
                                     </div>
 
                                     <div data-conv-case="three">
+                                        <select data-conv-question="Ответ.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+                                    <div data-conv-case="four">
+                                        <select data-conv-question="Ответ.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+
+                                    <div data-conv-case="five">
+                                        <select data-conv-question="Ответ.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+
+                                    <div data-conv-case="six">
                                         <select data-conv-question="Ответ.">
                                             <option data-callback="restore">Выйти</option>
                                         </select>
@@ -328,6 +294,16 @@
                 stateWrapper.current.next = originalState;
                 console.log('changed current.next to originalState');
             }
+
+
+
+            ready();
+
+            $("#demo").toggleClass("none");
+            $("#window").removeClass("animation-appearance");
+            $("#window_min").toggleClass("none");
+            $("#window_min").addClass("animation-appearance");
+
             ready();
         }
     </script>
