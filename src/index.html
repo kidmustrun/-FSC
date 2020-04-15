@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>convForm - example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <link rel="stylesheet" type="text/css" href="dist/jquery.convform.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="demo.css">
+</head>
+
+<body>
+    <section id="demo" class="none">
+        <div class="vertical-align">
+            <div class="row">
+                <div class="col-md-4 col-lg-3 pull-right col-xs-offset-0 col-xs-12">
+                    <div class="card bg-light">
+                        <div class="card-header">Онлайн-консультант<button type="button" class="close" id="close_big">
+                                <span aria-hidden="true">&times;</span></button></div>
+                        <div id="chat" class="conv-form-wrapper">
+                            <img src="media/animals.png" alt="animals">
+                            <form action="" method="GET" class="hidden">
+                                <select data-callback="storeState" data-conv-question="Здравствуйте,я помощник компании FCS.Что вы хотите узнать?" name="first-question">
+                                    <option value="yes">Стоимость услуг</option>
+                                    <option value="no">Вопросы по получению сертификации</option>
+                                    <option value="may">О компании</option>
+                                </select>
+
+                                <div data-conv-fork="first-question">
+                                    <div data-conv-case="yes">
+                                        <select name="cost" data-conv-question="Выберите вопрос,который вас интересует">
+                                            <option value="on">Сколько стоит сертификация?</option>
+                                            <option value="tw">Сколько стоят услуги органа по сертификации?</option>
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+                                    <div data-conv-case="no">
+                                        <select name="certificate" data-conv-question="Выберите вопрос,который вас интересует">
+                                            <option value="a">В чём суть сертификации лесоуправления?</option>
+                                            <option value="b">В чём суть сертификации цепочек поставок?</option>
+                                            <option value="c">Как выяснить, есть ли сертификаты FSC у моих
+                                                поставщиков?</option>
+                                            <option value="d">Сколько времени занимает получение сертификата? </option>
+                                            <option value="e">Как выбрать орган по сертификации?</option>
+                                            <option value="f">Орган сертификации проконсультирует нас,как выполнять ваши
+                                                стандарты?</option>
+                                                <option value="j">Что делать ,если в моём городе нет органов по
+                                                    сертификации/консультантов?</option>
+                                                <option value="k">Можем ли мы получить сертификат лесоуправления,если мы всё
+                                                    делаем строго по законодательству?</option>
+                                                <option value="l">Кто выдаёт сертификаты?</option>
+                                                <option value="m" data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+                                    <div data-conv-case="may">
+                                        <select name="company" data-conv-question="Выберите вопрос,который вас интересует">
+                                            <option value="one">Где и как пройти обучение?</option>
+                                            <option value="two">С чего нам начать?</option>
+                                            <option value="three">Подскажите пожалуйста,есть ли у вас региональные
+                                                специалисты?</option>
+                                                <option value="four">Если мы используем только сертифицированное сырье, но у нас нет сертификата,
+                                                    можем ли мы ставить логотип FSC на свою продукцию (например, если мы
+                                                    производим конечную продукцию только из сертифицированной FSC бумаги?)
+                                                </option>
+                                                <option value="five">FSC - это иностранная система?</option>
+                                                <option value="six">Могу ли я продавать свою продукцию за границу без
+                                                    сертификата FSC?</option>
+                                                <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+
+
+
+                                <!--Вторая часть .Ответы на вопрос.-->
+
+                                <div data-conv-fork="cost">
+
+                                    <div data-conv-case="on">
+                                        <select data-conv-question="Стоимость и сроки зависят от множества факторов и всегда индивидуальны.
+                                        Стоимость складывается из нескольких составляющих: <br>
+                                        • затраты на приведение деятельности компании в соответствие со стандартами;<br>
+                                        • стоимость услуг органа по сертификации;<br>
+                                        • стоимость услуг консультантов (опционально).">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div data-conv-case="tw">
+                                        <select data-conv-question="Стоимость услуг ОС также зависит от множества факторов. Для сертификации
+                                        лесоуправления это: <br>
+                                        ● Структура и размер компании; <br>
+                                        ● Методы управления и ведения хозяйственной деятельности;<br>
+                                        ● Площадь сертифицируемой территории;<br>
+                                        ● Количество лесных участков;<br>
+                                        ● География расположения участков;<br>
+                                        ● Транспортная доступность полевых объектов;<br>
+                                        ● Расположение ключевых заинтересованных сторон;<br>
+                                        ● Степень подготовленности клиента к выполнению требований FSC и др.<br><br>
+                                        
+                                        Для сертификации цепочки поставок (без контролируемой древесины) это:<br>
+                                        ● Cхема сертификации (групповая, мульти-сайт, индивидуальная);<br>
+                                        ● Область действия сертификата (продукция, площадки, объекты и др.);<br>
+                                        ● Годовой оборот компании;<br>
+                                        ● География и количество объектов для оценки (офисы, склады, производственные
+                                        базы);<br>
+                                        ● Наличие или отсутствие подрядчиков, которые требуют полевой оценки и др.
+                                        Для сертификации цепочки поставок (с контролируемой древесиной). <br><br>
+                                        Все факторы,
+                                        перечисленные выше для цепочки поставок, и дополнительно:<br>
+                                        ● География и количество поставщиков контролируемой древесины;<br>
+                                        ● Расположение ключевых заинтересованных сторон;<br>
+                                        ● Степень подготовленности клиента и его поставщиков к выполнению требований FSC
+                                        и др.<br><br>
+                                        Стоимость услуг органов по сертификации во многих случаях рассчитывается
+                                        индивидуально. Нередко предоставляются скидки, в частности, при сертификации по
+                                        нескольким схемам одновременно, или если сертифицируются два или более предприятий
+                                        от одного собственника, или если сертифицируются одновременно лесоуправление и
+                                        цепочка поставок.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div data-conv-fork="certificate">
+
+                                    <div data-conv-case="a">
+                                        <select data-conv-question="Сертификация лесоуправления - это вид сертификации для владеющих или
+                                        управляющих лесами организаций, которые хотят, чтобы их лесоуправление
+                                        соответствовало требованиям <a href=https://ru.fsc.org/ru-ru/cert/principy>принципов и критериев FSC</a>. Эти принципы адаптируются к
+                                        конкретной стране в виде национальных стандартов. В России действует Национальный
+                                        стандарт FSC. Соответственно, сертификат лесоуправления FSC в России может получить
+                                        только та организация, чье лесоуправление соответствует требованиям Национального
+                                        стандарта FSC.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+
+                                    <div data-conv-case="b">
+                                        <select data-conv-question="Сертификация цепочки поставок требуется производителям, переработчикам и
+                                        продавцам FSC сертифицированной продукции. Сертификат цепочки поставок
+                                        подтверждает, что продукция произведена именно из сырья, происходящего из лесов, где
+                                        лесоуправление сертифицировано. Чтобы это требование соблюдалось, каждый участник
+                                        цепочки поставок должен иметь такой сертификат. Только в этом случае конечный
+                                        производитель сможет поставить логотип FSC на свою продукцию.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+
+                                    <div data-conv-case="c">
+                                        <select data-conv-question="Проверить наличие сертификата FSC у интересующей вас организации можно двумя
+                                        способами:<br>
+                                        a) В <a href=http://info.fsc.org>международной базе данных</a>, указав наименование компании или
+                                        номер сертификата.<br>
+                                        b) Перечень Российских держателей сертификатов есть в формате pdf на <a href=https://ru.fsc.org/ru-ru/chto_my_delaem/facts_and_figures>сайте</a>.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+                                    <div data-conv-case="d">
+                                        <select data-conv-question="Сроки зависят от множества факторов и всегда индивидуальны. По экспертным
+                                        оценкам, срок получения сертификата лесоуправления (FM) составляет в среднем от 6 до 12
+                                        месяцев, в случае сертификата цепочки поставок (CoC) этот срок значительно меньше от 1
+                                        до 3 месяцев. Для получения сертификата цепочки поставок с контролируемой древесиной
+                                        это время может составить в среднем от 3 до 6 месяцев.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+                                    <div data-conv-case="e">
+                                        <select data-conv-question="Зайдите на наш <a href=https://ru.fsc.org/ru-ru/cert/so>сайт</a> и выберите орган по сертификации
+                                            из предложенного списка аккредитованных компаний. Поскольку в России работает около 20
+                                            органов по сертификации, то имеет смысл провести тендер среди них.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+                                    <div data-conv-case="f">
+                                        <select data-conv-question="Нет, орган по сертификации не может консультировать своего клиента.
+                                        Консультацией и подготовкой компаний к сертификации занимаются консультанты. Перечень
+                                        зарегистрированных FSC России консультантов размещен <a href=https://ru.fsc.org/ru-ru/cert/consult>здесь</a>.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+                                    <div data-conv-case="j">
+                                        <select data-conv-question="Органы по сертификации работают по всей России и не привязаны к конкретному
+                                        городу. В перечне консультантов на сайте FSC России есть указание на регионы их
+                                        деятельности, но они также не привязаны к конкретному населенному пункту.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+                                    <div data-conv-case="k">
+                                        <select data-conv-question="Нет, этого недостаточно. Нужно выполнить все требования Национального стандарта
+                                        FSC. Сертификация FSC - это не только соответствие деятельности компании
+                                        национальному законодательству, но и дополнительная социальная и экологическая
+                                        ответственность, которая включает в себя: соблюдение прав местного населения и коренных
+                                        народов, оценку социальных последствий своей деятельности, сохранение биоразнообразия
+                                        и наиболее ценных в экологическом отношении лесов от рубок, и др. Помимо этого, стандарт
+                                        включает и другие требования, например экономическую устойчивость, неистощительность
+                                        лесопользования, сокращение отходов при лесозаготовках, мониторинг, и другие
+                                        требования">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+                                    <div data-conv-case="l">
+                                        <select data-conv-question="Выдают сертификаты специальные независимые органы по сертификации, которые
+                                        аккредитованы международной организацией по аккредитации ASI (Assurance Services
+                                        International). Для получения сертификата компании нужно заключить договор с органом по
+                                        сертификации и пройти аудит на соответствие требованиям стандартов FSC. Данные органы
+                                        подвергаются регулярному контролю со стороны ASI. Выбор органа по сертификации
+                                        является важным и ответственным шагом, следует учитывать не только ценовую политику,
+                                        но и деловую репутацию.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <!-- -->
+
+
+                                <div data-conv-fork="company">
+                                    <div data-conv-case="one">
+                                        <select data-conv-question="FSC России предлагает сертифицируемым компаниям, держателям сертификатов,
+                                        заинтересованным сторонам различные программы обучения. Подробную информацию
+                                        можно найти <a href=https://ru.fsc.org/ru-ru/cert/study>здесь</a>.
+                                        Также на <a href=https://etraining.fsc.org/>сайте</a> есть онлайн курсы на английском языке по товарным
+                                        знакам, цепочке поставок и контролируемой древесине для аудиторов. В случае успешного
+                                        прохождения онлайн курса участник получает сертификат, подтверждающий прохождение
+                                        обучения.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+
+                                    <div data-conv-case="two">
+                                        <select data-conv-question="Для начала Вам необходимо определить вид сертификации и вид сертификата,
+                                        которые необходимы вашей компании. Далее, вам нужно изучить необходимый стандарт
+                                        <a href=https://ru.fsc.org/ru-ru/cert/standarty>(ссылка на сайт, где выложены стандарты)</a> и привести систему управления на вашем
+                                        предприятии в соответствие с ними. Далее свяжитесь с одним или с несколькими FSC
+                                        аккредитованными органами по сертификации (ОС), работающими в России (контактные
+                                        данные <a href=https://ru.fsc.org/ru-ru/cert/so>здесь</a>). Чтобы оценить время, которое потребуется вам на подготовку к
+                                        сертификации, и ее стоимость, ОС понадобятся некоторые основные сведения о вашей
+                                        деятельности.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+
+                                    <div data-conv-case="three">
+                                        <select data-conv-question="Региональных специалистов у нас нет, пишите или звоните в офис в Москве.
+                                        Контакты размещены <a href=https://ru.fsc.org/ru-ru/o_nas/kontakty>здесь</a>. Есть также представитель в
+                                        Красноярске, к нему можно обращаться, если Вы проживаете в СФО или ДВФО.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+                                    <div data-conv-case="four">
+                                        <select data-conv-question="Нет, для того чтобы наносить логотип FSC на свою продукцию, вам необходимо
+                                        сертифицироваться по стандарту цепочки поставок COC. Это необходимо также для того,
+                                        чтобы публично продвигать свою организацию как ответственную с помощью FSC.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+
+                                    <div data-conv-case="five">
+                                        <select data-conv-question="Лесной попечительский совет (Forest Stewardship Council®, FSC) — это
+                                        международная некоммерческая неправительственная организация. У нее нет никакой
+                                        ведущей страны или региона. FSC управляется членами, представляющими самые
+                                        различные страны и регионы. Среди членов FSC есть также немало российских граждан и
+                                        организаций.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+
+                                    <div data-conv-case="six">
+                                        <select data-conv-question="Да, можете - схема FSC является добровольной. Но большинство покупателей
+                                        запрашивают подтверждение соответствия международным схемам лесной сертификации.
+                                        Возможно, Вам придется искать другого покупателя либо другие рынки сбыта.">
+                                            <option data-callback="restore">Выйти</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+
+                            </form>
+                        </div>
+
+
+                        <div class="contacts-wrapper">
+                            <a href="https://ru.fsc.org/ru-ru/o_nas/kontakty" class="contacts">
+                                <div class="container-fluid">
+                                    <div class="row">
+
+                                        <img src="media/phone.png" alt="phone">
+
+
+                                        <span>Узнать номер</span>
+
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://ru.fsc.org/ru-ru/o_nas/kontakty" class="contacts">
+                                <div class="container-fluid">
+                                    <div class="row">
+
+                                        <img src="media/geo.png" alt="geo">
+
+
+                                        <span>Узнать адрес</span>
+
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://ru.fsc.org/ru-ru/o_nas/kontakty" class="contacts">
+                                <div class="container-fluid">
+                                    <div class="row">
+
+                                        <img src="media/mail.png" alt="mail">
+
+
+                                        <span>Узнать почту</span>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <div class="window none" id="window">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+
+                <h5 class="card-title text-center ">Онлайн-консультант<button type="button" class="close" id="close_small">
+                    <span aria-hidden="true">&times;</span></button></h5>
+
+                <div class="min-message">Здравствуйте, Вам помочь?</div>
+
+                <button class="min-button" id="help">Да!</button>
+            </div>
+        </div>
+    </div>
+    <div class="window-min" id="window_min">
+        <img src="media/mail.png" alt="mail">
+    </div>
+
+
+    </div>
+    <script type="text/javascript" src="dist/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="dist/autosize.min.js"></script>
+    <script type="text/javascript" src="dist/jquery.convform.js"></script>
+    <script>
+        function toTheStart(stateWrapper, ready) {
+            window.open("to-begin");
+            ready();
+        }
+
+        function bing(stateWrapper, ready) {
+            window.open("https://bing.com");
+            ready();
+        }
+
+        var rollbackTo = false;
+        var originalState = false;
+
+        function storeState(stateWrapper, ready) {
+            rollbackTo = stateWrapper.current;
+            console.log("storeState called: ", rollbackTo);
+            ready();
+        }
+
+        function rollback(stateWrapper, ready) {
+            console.log("rollback called: ", rollbackTo, originalState);
+            console.log("answers at the time of user input: ", stateWrapper.answers);
+            if (rollbackTo != false) {
+                if (originalState == false) {
+                    originalState = stateWrapper.current.next;
+                    console.log('stored original state');
+                }
+                stateWrapper.current.next = rollbackTo;
+                console.log('changed current.next to rollbackTo');
+            }
+            ready();
+        }
+
+        function restore(stateWrapper, ready) {
+            if (originalState != false) {
+                stateWrapper.current.next = originalState;
+                console.log('changed current.next to originalState');
+            }
+
+
+
+            ready();
+
+            $("#demo").toggleClass("none");
+            $("#window").removeClass("animation-appearance");
+            $("#window_min").toggleClass("none");
+            $("#window_min").addClass("animation-appearance");
+
+            ready();
+        }
+    </script>
+    <script>
+        $(document).ready(function() {
+
+            $("#window_min").click(function() {
+
+                $("#window_min").toggleClass("none");
+                $("#window").toggleClass("none");
+                $("#window").addClass("animation-appearance");
+                $("#window_min").removeClass("animation-appearance");
+
+
+            });
+            $("#close_small").click(function() {
+                $("#window").removeClass("animation-appearance");
+                $("#window_min").toggleClass("none");
+                $("#window_min").addClass("animation-appearance");
+                $("#window").toggleClass("none");
+            });
+            $("#close_big").click(function() {
+
+                $("#demo").toggleClass("none");
+                $("#window").toggleClass("none");
+                $("#demo").removeClass("animation-appearance");
+                $("#window").addClass("animation-appearance");
+
+            });
+            $("#help").click(function() {
+                $("#demo").toggleClass("none");
+                $("#window").toggleClass("none");
+                $("#demo").addClass("animation-appearance");
+                $("#window").removeClass("animation-appearance");
+                jQuery(function($) {
+                    convForm = $('#chat').convform({
+                        selectInputStyle: 'disable'
+                    });
+                    console.log(convForm);
+                });
+
+            });
+        });
+    </script>
+</body>
+
+</html>
