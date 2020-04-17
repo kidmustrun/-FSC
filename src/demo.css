@@ -23,7 +23,6 @@ section#demo {
     width: 100vw;
     transition: height 9999s;
     top: 0;
-    right: 5vh;
 }
 
 .vertical-align {
@@ -33,9 +32,9 @@ section#demo {
     width: 100vw;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 993px) {
     section#demo {
-        right: 0;
+        right: 5vh;
     }
 }
 
