@@ -401,36 +401,32 @@
     
     .contacts-wrapper {
         display: flex;
-        justify-content: space-around;
+        width: 100%;
         padding: 10px;
+        justify-content: center;
     }
     
     a.contacts {
         display: flex;
-        padding: 3px;
+        padding: 10px 3px;
+        margin: 0 -5px;
         border-radius: 20px;
-        background-color: #fff;
-        border: 3px solid #75C045;
-        color: #75C045;
-        font-size: 0.905rem;
+        background-color: #75C045;
+        font-size: 1rem;
         align-items: center;
-        flex-direction: column;
         justify-content: center;
         z-index: 1;
+        width: 95%;
         animation: border 3s infinite ease-in-out, text-animation 3s infinite ease-in-out, opacity-img 3s infinite ease-in-out;
     }
     
-    .contacts img {
-        height: 40%;
-    }
-    
     .contacts span {
-        display: block;
+        color: #ffffff;
     }
     
-    a.contacts .row {
-        padding: 3%;
-        text-align: center;
+    .contacts img {
+        height: 2rem;
+        margin: 0 5px;
     }
     
     .window {
