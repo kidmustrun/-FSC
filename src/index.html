@@ -52,7 +52,7 @@
                         <div id="chat" class="conv-form-wrapper">
                             <img src="media/animals.png" alt="animals">
                             <form action="" method="GET" class="hidden">
-                                <select data-callback="storeState" data-conv-question="Здравствуйте,я помощник компании FCS.Что вы хотите узнать?" name="first-question">
+                                <select data-callback="storeState" data-conv-question="Здравствуйте, я помощник компании FSC России. Что вы хотите узнать?" name="first-question">
                                     <option value="yes">Стоимость услуг</option>
                                     <option value="no">Вопросы по получению сертификации</option>
                                     <option value="may">О компании</option>
@@ -60,35 +60,35 @@
 
                                 <div data-conv-fork="first-question">
                                     <div data-conv-case="yes">
-                                        <select name="cost" data-conv-question="Выберите вопрос,который вас интересует">
+                                        <select name="cost" data-conv-question="Выберите вопрос, который вас интересует">
                                             <option value="on">Сколько стоит сертификация?</option>
                                             <option value="tw">Сколько стоят услуги органа по сертификации?</option>
                                             <option data-callback="restore">Выйти</option>
                                         </select>
                                     </div>
                                     <div data-conv-case="no">
-                                        <select name="certificate" data-conv-question="Выберите вопрос,который вас интересует">
+                                        <select name="certificate" data-conv-question="Выберите вопрос, который вас интересует">
                                             <option value="a">В чём суть сертификации лесоуправления?</option>
                                             <option value="b">В чём суть сертификации цепочек поставок?</option>
                                             <option value="c">Как выяснить, есть ли сертификаты FSC у моих
                                                 поставщиков?</option>
                                             <option value="d">Сколько времени занимает получение сертификата? </option>
                                             <option value="e">Как выбрать орган по сертификации?</option>
-                                            <option value="f">Орган сертификации проконсультирует нас,как выполнять ваши
+                                            <option value="f">Орган сертификации проконсультирует нас, как выполнять ваши
                                                 стандарты?</option>
-                                                <option value="j">Что делать ,если в моём городе нет органов по
+                                                <option value="j">Что делать, если в моём городе нет органов по
                                                     сертификации/консультантов?</option>
-                                                <option value="k">Можем ли мы получить сертификат лесоуправления,если мы всё
+                                                <option value="k">Можем ли мы получить сертификат лесоуправления, если мы всё
                                                     делаем строго по законодательству?</option>
                                                 <option value="l">Кто выдаёт сертификаты?</option>
                                                 <option value="m" data-callback="restore">Выйти</option>
                                         </select>
                                     </div>
                                     <div data-conv-case="may">
-                                        <select name="company" data-conv-question="Выберите вопрос,который вас интересует">
+                                        <select name="company" data-conv-question="Выберите вопрос, который вас интересует">
                                             <option value="one">Где и как пройти обучение?</option>
                                             <option value="two">С чего нам начать?</option>
-                                            <option value="three">Подскажите пожалуйста,есть ли у вас региональные
+                                            <option value="three">Подскажите пожалуйста, есть ли у вас региональные
                                                 специалисты?</option>
                                                 <option value="four">Если мы используем только сертифицированное сырье, но у нас нет сертификата,
                                                     можем ли мы ставить логотип FSC на свою продукцию (например, если мы
@@ -112,7 +112,7 @@
 
                                     <div data-conv-case="on">
                                         <select data-conv-question="Стоимость и сроки зависят от множества факторов и всегда индивидуальны.
-                                        Стоимость складывается из нескольких составляющих: <br>
+                                        Стоимость складывается из нескольких составляющих: <br\>
                                         • затраты на приведение деятельности компании в соответствие со стандартами;<br>
                                         • стоимость услуг органа по сертификации;<br>
                                         • стоимость услуг консультантов (опционально).">
