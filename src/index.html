@@ -335,19 +335,7 @@
                 </div>
             </div>
     </section>
-    <div class="window none" id="window">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
 
-                <h5 class="card-title text-center ">Виртуальный помощник<button type="button" class="close" id="close_small">
-                    <span aria-hidden="true">&times;</span></button></h5>
-
-                <div class="min-message">Здравствуйте, Вам помочь?</div>
-
-                <button class="min-button" id="help">Да!</button>
-            </div>
-        </div>
-    </div>
     <div class="window-min" id="window_min">
         <img src="media/mail.png" alt="mail">
     </div>
@@ -402,7 +390,6 @@
             ready();
 
             $("#demo").toggleClass("none");
-            $("#window").removeClass("animation-appearance");
             $("#window_min").toggleClass("none");
             $("#window_min").addClass("animation-appearance");
 
@@ -415,31 +402,9 @@
             $("#window_min").click(function() {
 
                 $("#window_min").toggleClass("none");
-                $("#window").toggleClass("none");
-                $("#window").addClass("animation-appearance");
-                $("#window_min").removeClass("animation-appearance");
-
-
-            });
-            $("#close_small").click(function() {
-                $("#window").removeClass("animation-appearance");
-                $("#window_min").toggleClass("none");
-                $("#window_min").addClass("animation-appearance");
-                $("#window").toggleClass("none");
-            });
-            $("#close_big").click(function() {
-
                 $("#demo").toggleClass("none");
-                $("#window").toggleClass("none");
-                $("#demo").removeClass("animation-appearance");
-                $("#window").addClass("animation-appearance");
-
-            });
-            $("#help").click(function() {
-                $("#demo").toggleClass("none");
-                $("#window").toggleClass("none");
                 $("#demo").addClass("animation-appearance");
-                $("#window").removeClass("animation-appearance");
+                $("#window_min").removeClass("animation-appearance");
                 jQuery(function($) {
                     convForm = $('#chat').convform({
                         selectInputStyle: 'disable'
@@ -447,7 +412,17 @@
                     console.log(convForm);
                 });
 
+
             });
+            $("#close_big").click(function() {
+
+                $("#demo").toggleClass("none");
+                $("#window_min").toggleClass("none");
+                $("#demo").removeClass("animation-appearance");
+                $("#window_min").addClass("animation-appearance");
+
+            });
+
         });
     </script>
 </body>
