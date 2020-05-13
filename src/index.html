@@ -331,18 +331,18 @@
     <script type="text/javascript" src="dist/jquery-1.12.3.min.js"></script>
     <script type="text/javascript" src="dist/autosize.min.js"></script>
     <script type="text/javascript" src="dist/jquery.convform.js"></script>
-    
-    <script>
 
+    <script>
         function restore(stateWrapper, ready) {
             stateWrapper.current.next = null;
+            $("#demo").toggleClass("none");
+            $("#window_min").toggleClass("none");
+            $("#window_min").addClass("animation-appearance");
             ready();
         }
-
     </script>
 
     <script>
-
         $(document).ready(function() {
 
             $("#window_min").click(function() {
@@ -363,9 +363,8 @@
                 $("#window_min").toggleClass("none");
                 $("#demo").removeClass("animation-appearance");
                 $("#window_min").addClass("animation-appearance");
-                });
             });
-        
+        });
     </script>
 </body>
 
